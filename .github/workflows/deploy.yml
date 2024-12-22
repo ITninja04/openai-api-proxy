@@ -27,11 +27,13 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           secrets: |
+            API_KEY
             AZURE_OPENAI_API_KEY
             AZURE_OPENAI_ENDPOINT
             AZURE_API_VERSION
             AZURE_DEPLOYMENT_MODELS
         env:
+          API_KEY: ${{ secrets.API_KEY }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_API_VERSION: ${{ secrets.AZURE_API_VERSION }}
