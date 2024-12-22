@@ -15,7 +15,7 @@ export function auzreOpenAI(env: Record<string, string>) {
     },
     pre: (req) => ({
       ...req,
-      model: req.model.split('/')[1],
+      model: req.model.indexOf('/') === -1 ? req.model : req.model.split('/')[1],
       stream: false,
     }),
   })
