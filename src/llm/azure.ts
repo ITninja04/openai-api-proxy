@@ -30,9 +30,9 @@ export function auzreOpenAI(env: Record<string, string>) {
     if (it.includes(':')) {
       const [model, deployment] = it.split(':')
       map[model] = deployment
-      return `azure/${model}`
+      return `${model}`
     }
-    return `azure/${it}`
+    return `${it}`
   })
   return r
 }
